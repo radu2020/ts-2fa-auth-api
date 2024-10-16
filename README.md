@@ -131,4 +131,22 @@ PUT /auth/change-password
 }
 ```
 
+## General questions
+
+- How much time did you spend working on the solution?
+
+3-4 Hours in total with documenting and testing requests from Postman.
+
+- What’s the part of the solution you are most proud of?
+
+I am proud of the part which sends the code via SMS!
+
+- If you had more time, what other things you would like to do?
+
+Implement a DB UserStore and write tests.
+
+- Do you have any feedback regarding this coding challenge?
+
+It was really fun! :)
+
 ## That's all folks!
