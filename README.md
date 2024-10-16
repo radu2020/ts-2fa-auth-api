@@ -20,6 +20,7 @@ This solution will implement a User Registration and Login API using Express.js 
 - dotenv: For handling environment variables.
 
 ## Project Structure
+```
 ts-2fa-auth-api/
 │
 ├── src/
@@ -35,6 +36,7 @@ ts-2fa-auth-api/
 │       └── twilio.ts
 ├── .env
 └── tsconfig.json
+```
 
 ## How to run
 
@@ -56,6 +58,7 @@ Use cURL or Postman to make requests.
 1. Register User:
 
 POST /auth/register
+```
 {
   "name": "John Doe",
   "email": "john@example.com",
@@ -66,10 +69,12 @@ POST /auth/register
 {
     "message": "User registered successfully"
 }
+```
 
 2. Login (2FA Code Sent via SMS):
 
 POST /auth/login
+```
 {
   "email": "john@example.com",
   "password": "password123"
@@ -79,10 +84,12 @@ POST /auth/login
     "message": "2FA code sent via SMS",
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5AZXhhbXBsZS5jb20iLCJpYXQiOjE3MjkwNzA0NjcsImV4cCI6MTcyOTA3NDA2N30.OtyGarTw9s-8IA8OPRrAV6GpWTLkHtB5Ufj5ZGPKXhw"
 }
+```
 
 3. Verify 2FA:
 
 POST/auth/verify-2fa
+```
 {
   "email": "john@example.com",
   "code": 205478
@@ -92,10 +99,12 @@ POST/auth/verify-2fa
     "message": "Login successful",
     "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5AZXhhbXBsZS5jb20iLCJpYXQiOjE3MjkwNzA0ODMsImV4cCI6MTcyOTA3NDA4M30.bPhCrnziO_JTAGnhSXxPeS-3xIiKmGMo7GyckV5StLM"
 }
+```
 
 4. Update Profile:
 
 PUT /auth/profile
+```
 {
   "email": "john@example.com",
   "name": "John Doe",
@@ -105,10 +114,12 @@ PUT /auth/profile
 {
     "message": "User profile updated successfully"
 }
+```
 
 5. Change Password:
 
 PUT /auth/change-password
+```
 {
   "email": "john@example.com",
   "newPassword": "newPassword",
@@ -118,6 +129,6 @@ PUT /auth/change-password
 {
     "message": "Password changed successfully"
 }
-
+```
 
 ## That's all folks!
